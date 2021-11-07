@@ -9,17 +9,17 @@ function distanceFromHqInBlocks(pickUp){
 
 function distanceFromHqInFeet(pickUp){
     if (pickUp > 42){
-        return (pickUp - 42)*264
+        return distanceFromHqInBlocks(pickUp)*264
     }else{
-        return (42-pickUp)*264
+        return distanceFromHqInBlocks(pickUp)*264
     } 
 }
 
-function distanceTravelledInFeet(start, end){
-    if (start < 42){
-        return(start-end)*264;
-    } else{
+function distanceTravelledInFeet(start,end){
+    if (start > 42){
         return(end - start)*264;
+    } else{
+        return(start - end)*264;
     }  
 }
 
